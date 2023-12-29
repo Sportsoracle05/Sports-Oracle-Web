@@ -1,0 +1,49 @@
+.header {
+    text-align: center;
+    padding: 30px;
+}
+
+.header h1 {
+    color: #00EAFA;
+    font-family: sans-serif;
+    letter-spacing: 5px;
+}
+body {
+    background-color: #0E2096;
+}
+
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    
+}
+
+.img-granny {
+    display: flex;
+    justify-content: center;
+}
+
+.img-margin {
+    margin-left: 96px;
+}
+
+.top {
+    margin-top: -509px;
+}
+
+
+
+.img-child {
+    size-adjust: 10px;
+    size: 10px;
+    width: 187px;
+    height: 188px;
+    border-radius: 101px;
+    filter: grayscale(100%);   
+}
+
+.img-child:hover {
+    filter: none;
+}
