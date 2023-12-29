@@ -1,0 +1,200 @@
+.body {
+    background-color: #0E2096;
+    color: white;
+    
+    font-family: sans-serif;
+}
+
+header {
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+    color: #00EAFA;
+    margin-top: 90px;
+    letter-spacing: 8px;
+}
+
+.name-email {
+    display: flex;
+    margin-top: 30px;
+}
+
+.name {
+    margin-left: 240px;
+}
+
+.email {
+    margin-left: 240px;
+}
+
+.subject {
+    margin-left: 240px;
+    margin-top: 30px;
+    overflow-wrap: break-word;
+}
+
+.message {
+    margin-left: 240px;
+    margin-top: 30px;
+}
+
+.name input {
+    background-color: rgba(0, 0, 0, 0);
+    width: 230%;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.in-holder input::placeholder {
+    color: rgba(255, 255, 255, 0.813);
+    font-weight: lighter;
+    font-size: large;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}    
+
+.email input {
+    background-color: rgba(0, 0, 0, 0);
+    width: 230%;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.subject input {
+    background-color: rgba(0, 0, 0, 0);
+    width: 77%;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid white;
+}
+
+.message textarea{
+    background-color: rgba(0, 0, 0, 0);
+    width: 77%;
+    height: 70px;
+    border: none;
+    border-bottom: 1px solid white;
+    resize: none;
+}
+
+.in-holder textarea::placeholder {
+    color: rgba(255, 255, 255, 0.813);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    font-style: italic;
+    font-weight: 100;
+}
+
+.na:hover {
+    border-bottom: 3px solid white;
+}
+
+.em:hover {
+    border-bottom: 3px solid white;
+}
+
+.subject input:hover {
+    border-bottom: 3px solid white;
+}
+
+.message textarea:hover {
+    border-bottom: 3px solid white;
+}
+
+.btn-par {
+    width: 54.8%;   
+}
+
+.btn {
+    float: right;
+    padding: 1px;
+    width: 15%;
+}
+
+.btn {
+    color: var(--corvid-color,rgb(var(--txt,var(--color_15))));
+    font: var(--fnt,var(--font_5));
+    position: relative;
+    transition: var(--trans2,color .4s ease 0s);
+    white-space: nowrap;
+    background: transparent;
+    vertical-align: baseline;
+    cursor: pointer;
+    text-align: initial;
+    text-rendering: auto;
+    letter-spacing: 2px;
+    border-style: none;
+    height: 1px;
+    font-size: x-large;
+    font-weight: 700;
+    color: #00EAFA;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    color: white;
+}
+
+input[type=text]:focus {
+    border-style: none;
+    border-radius: 10px;
+}
+
+input[type=email]:focus {
+    border-style: none;
+    border-radius: 10px;
+}
+
+textarea[type=text]:focus {
+    border-style: none;
+    border-radius: 10px;
+}
+
+input {
+    color: white;
+}
+
+textarea {
+    color: white;
+}
+
+.half2 {
+    text-align: center;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 200px;
+    word-spacing: 5px;
+}
+
+.half2-par {
+    margin-left: 130px;
+    text-align: left;
+}
+
+.half2-pa {
+    text-align: left;
+}
+
+.h2h5 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+}
+
+.dis {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #00EAFA;
+    padding: 30px;
+    font-size: large;
+}
+
+.dis a {
+    color: #00EAFA;
+}
+
+
+
+
