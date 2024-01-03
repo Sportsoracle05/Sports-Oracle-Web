@@ -3,295 +3,425 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script src="script.js"></script>
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    
     <title>Sports Oracle</title>
+    <LINK REL="SHORTCUT ICON"
+    HREF="images/HLogo.ico">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+    
+    <style>
+    #clappr{ width: 100%;height: 100%;position: relative; min-height: 320px; margin-bottom: 25px;}
+    #clappr > div{ width:100%;height:100%;position: absolute;}
+    </style>
+    
     <header class="main-header"> 
-        <!-- Simulate a smartphone / tablet -->
-        <div class="mobile-container">
-        
-            <!-- Top Navigation Menu -->
-            <div class="topnav">
-                <div class="logo">
-                    <img class="header" src="images\LogoSample_ByTailorBrands1.jpg" alt="logo" srcset="">
-                </div>
-              <div id="myLinks">
-                <a href="#watch">Watch</a>
-                <a href="FooterLinks/ContactUs/index.html">Contact</a>
-                <a href="FooterLinks/AboutUs/index.html">About</a>
-              </div>
-              <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-              </a>
-            </div>  
+        <div class="logo">
+            <img class="header" src="images\LogoSample_ByTailorBrands1.jpg" alt="logo" srcset="">
         </div>
-    
     </header>
-   
 </head>
-
-
-<body class="body">
-    <div class="img-parent">
-        <img class="img" src="images\BannerMaker_20102023_072914.jpg">
-
+<body onload="init_api()">
+    <div class="bg-image"><img class="mount" src="Images/mount.jpg" alt="" srcset=""></div>
+    <div class="bg-text">
+        <h1 class="italic">EMSE Sports Roll</h1>
+        <h5 class="bord">Football blog & News</h5>
     </div>
-        <br>
-    <div class="colored-body">
-        <div class="s-header">
-            <h3>FEATURED ARTICLES</h3>
+    
+    <div>
+        <div class="sub-header" >
+            <hr> 
+            <h4 class="italic" >EMSE SPORTS TV</h4>
+        </div>
+        
+        
+        
+        
+        <div class="posts" >
+            <h2>EMSE Player</h2>
+            <h4>Once we're live, you'll be able to watch us here</h4>
         </div>
     
-        <div>
+    
+    <div id="clappr"></div>
+    <script>
+    var player = new Clappr.Player({
+    source:
+    "https://5caf24a595d94.streamlock.net:1937/huqywmhdqu/huqywmhdqu/playlist.m3u8"
+    ,
+    parentId: "#clappr",
+    width: '100%',
+    height: '100%',
+    autoPlay: true,
+    //gaAccount: 'UA-44332211-1',
+    //gaTrackerName: 'MyPlayerInstance'
+    });
+    </script>            
     
     
-    
-    
-    
-    
-    
-    
-    
+        <div class="half2">
+            <div class="podcast">
+                <h2 class="italic" >EMSE Sports Roll <br> Football Podcast</h2>
+            </div>
+            <div class="episode" >
+                <p>Listen to the latest episodes <br> & subscribe to all</p>
+            </div>
+            <div class="half2in" >
+                <div class="orangebg" >
+                    <h1 class="italic" >EMSE Sports <br> Roll <br> Football <br> Podcast</h1>
+                    <p>Hosted by Sport's Oracle & Mayor</p>
+                </div>
+            </div>
+             <div class="button" >
+                <iframe src="https://widget.spreaker.com/player?show_id=6052943&theme=dark&playlist=show" width="100%" height="80px" frameborder="4"></iframe>
+             </div>
+            
+            <div class="subscribe">
+                <p>Subscribe to our podcast via:<br>iTunes , Spotify</p>
+            </div>
         </div>
-              
+       
     
-    
-        <div class="foot-start">
-            <hr class="hhr">
-            <h3>Newsletter Sign-Up</h3>
-            <h6>Get Live football stories delivered to your inbox <br> on the go.</h6>
-        </div>
-        <div class="input-email">
-            <input type="email" name="Email" id="em" placeholder="Enter Your Email ID">
-            <button type="submit">Suscribe Now</button>
-        </div>
     </div>
+    <div class="news" >
+        <h1 class="italic" >Football News</h1>
+        
+    </div>
+    <div class="posts" >
+        <h2>Check back soon</h2>
+        <h4>Once posts are published, you'll see them here</h4>
+    </div>
+    <div class="btn" >
+        <button href="FooterLinks/ContactUs/index.html" class="italic" >All Posts</button>
+    </div>
+    <img src="images/threads.png">
+    
+   
+
 </body>
-
-<footer>
-    <div class="f1">
-        <h3>Lagos Headquaters</h3>
-        <h6>102 Madison Avenue - Second Floor <br> <br>Lagos, LA 10016 <br> <br> T:(646) 792.2426</h6>
-        <br>
-        <h5> <a href="http://#">GET DIRECTIONS</a></h5>
+<footer class="half2" >
+    <div class="f-head" >
+        <h1 class="italic" >EMSE Sports Roll</h1>
     </div>
-
-    <div class="f1">
-        <h3>Join Our Social Community</h3>
-        <div class="f-image">
-            <a href=""><img src="images/facebook-mobile.png" alt="" srcset=""></a>
-            <a href=""><img src="images/instagram-mobile.png" alt="" srcset=""></a>
-            <a href=""><img src="images/twitterx-mobile.png" alt="" srcset=""></a>
+    <div class="f-image">
+        <a href="https://www.facebook.com/EMSESportsOfficial?mibextid=VqkefZtyiaKY4pB6"><img src="Images/facebook-mobile.png" alt="" srcset=""></a>
+        <a href="https://www.instagram.com/emseofficial?igsh=YWYwM2I1ZDdmOQ=="><img src="Images/instagram-mobile.png" alt="" srcset=""></a>
+        <a href="https://x.com/_OOSOfficial?t=dcyyqcvCFnYCoan5Rp6aQA&s=09"><img src="Images/twitterx-mobile.png" alt="" srcset=""></a>
+    </div>
+    <div class="fs" >
+        <hr> 
+        <h3 class="italic" >The EMSE Sports Newsletter</h3>
+    </div>
+    <div class="newsletter" >
+        <div class="email" >
+            <h6>Email<span>*</span></h6>
+            <div class="Email-ID" >
+                <input type="text" placeholder="Enter your email here*" >
+                <button onsubmit="Submitted" type="Submit" >Submit</button>
+            </div>
         </div>
     </div>
-
-    <div class="f1">
-        <h3>Let's Discuss What's Next</h3>
-        <h6>Have a project or a question? <br> <br> We'd love to hear from you.</h6>
-        <br>
-        <h5> <a href="FooterLinks/ContactUs/index.html">CONTACT US</a></h5>
+    <br>
+    <br>
+    <div class="copyright" >
+        <h5> © 2024 by EMSE Sports. <br> Powered and secured by Oracle</h5>
     </div>
-
-    <hr>
-
-    <div class="copyright">
-        <h6>Copyright © 2023 Sport's Oracle. All rights reserved. <a href="#">Privacy Policy</a></h6>
-    </div>
-    
 </footer>
 </html>
 
 <style>
+
+.fp-Video {
+            border: 1px double black;
+            width: 322px;
+            height: 242px;
+        }
+        .display {
+            width: 100%;
+            height: 100%;
+            display: inline-block;
+        }
+        .display > video,
+        object {
+            width: 100%;
+            height: 100%;
+        }
+
+
+
+
+
+     .copyright h5{
+         margin-left: 20px;
+         color: white;
+         font-size: medium;
+         font-weight: normal;
+     }
+     .copyright {
+         padding: 3px;
+     }
+     .Email-ID {
+        padding: 5px;
+     }
+     .Email-ID button {
+        width: 29%;
+        height: 44px;
+        background-color: orange;
+        border-style: groove;
+        border-color: white;
+     }
+     .Email-ID input {
+        background-color: white;
+        height: 40px;
+        border-style: none;
+        width: 63%;
+     }
+     .email span {
+        color: orange;
+     }
+     .email {
+        margin-left: 25px;
+     }
+     .email h6{
+        color: white;
+        display: inline;
+        margin-left: 5px;
+     }
+     .fs {
+         padding: 30px;
+         margin-bottom: -20px;
+     }
+     .fs hr {
+     width: 8%;
+     height: 3px;
+     background-color: white;
+     color: black;
+     border-style: none;
+     border-radius: 5px;
+     float: left;
+     margin-left: 2px;
+     margin-top: 25px;
+     }
+     
+     .fs h3 {
+     margin-left: 46px;
+     color: white !important;
+     font-size: medium;
+     }
+     
+     .f-image:hover {
+        background-color: rgba(0,0,0,0);
+     }
+     
+     .f-image img:hover {
+        background-color: orange;
+     }
+     
+     .f-image img {
+     padding: 1px;
+     height: 30px;
+     width: auto;
+     margin-top: -20px;
+     margin-left: 20px;
+     }
+     
+     .f-head {
+        padding:10px;
+        margin-left: 7px;
+        color: orange;
+     }
+     footer {
+        background-color: gray;
+        background-image: url("images/paint1.png") !important;
+        
+     }
+     body img {
+        height: 55px;
+        width: 100%;
+        margin-bottom: -4px;
+     }
+     .btn button:hover  {
+     background-color: orange;
+     }
+     .btn button {
+     padding:10px;
+     width: 200px;
+     color: white;
+     background-color: black;
+     border-color: white;
+     border-style: none;
+     }
+     .btn {
+     text-align: center;
+     
+     }
+     .news {
+        background-image: url("images/orangebg.png");
+        padding: 30px;
+        margin-left: 60px;
+        height: 90px;
+     }
+     .news h1 {
+        color: black;
+        margin-left: -60px;
+        margin-top: 80px;
+     }
+     .subscribe {
+        text-decoration: none !important;
+        padding: 40px;
+     }
+     .subscribe p {
+        text-align: center;
+        text-decoration: none;
+        color: white;
+     }
+     .button a {
+        text-decoration: none;
+        color: white;
+        font-size: medium;
+        font-weight: bold;
+     }
+     .button button:hover  {
+        background-color: orange;
+     }
+     .button button {
+        padding:10px;
+        width: 200px;
+        
+        background-color: rgba(0,0,0,0);
+        border-color: white;
+        border-style: groove;
+     }
+     .button {
+        text-align: center;
+        padding: 30px;
+     }
+     .orangebg p {
+        padding: 3px;
+        font-weight: bold;
+     }
+     .orangebg h1 {
+        font-size: xx-large;
+        padding: 30px;
+        color: white;
+        letter-spacing: 2px;
+        
+     }
+     .orangebg {
+        background-image: url("images/threads.png");
+        background-color: orange;
+        width: 87%;
+        margin-left: 25px;
+        border-style: solid;
+        border-color: white;
+        background-repeat:repeat-x;
+        height: 300px;
+     }
+     .half2in {
+        text-align: center;
+        
+     }
+     .episode {
+        margin-left: 20px;
+        padding: 10px;
+        font-size: large;
+        color: white;
+     }
+     .podcast {
+        margin-top: 30px;
+        padding: 30px;
+        
+     }
+     .podcast h2{
+        text-align: center;
+        color: white;
+        font-size: xx-large;
+        letter-spacing: 2px;
+        margin-top: 30px;
+     }
+     .half2 {
+        background-image: url("images/paint2.png");
+        background-color: gray;
+        margin-left: -7px;
+        margin-right: -7px;
+     }
+     .posts {
+        text-align: center;
+        padding: 30px;
+     }
+     .posts h2 {
+        color: orange;
+     }
+     .sub-header {
+        margin-top: 35px;
+        display: inline;
+        
+     }
+     .sub-header hr {
+        width: 8%;
+        height: 3px;
+        background-color: black;
+        color: black;
+        border-style: none;
+        border-radius: 5px;
+        float: left;
+        margin-left: 15px;
+     }
+     
+     .sub-header h4 {
+       margin-left: 59px;
+     }
+     .logo {
+        padding: 10px;
+     }
     .header {
-    height: 50px;
-    width: auto;
-}
-
-
-
-  
-  .mobile-container {
-    width: 325%;
-    margin: auto;
-    height: 50px;
-    color: white;
-    border-radius: 10px;
-  }
-  
-  .topnav {
-    overflow: hidden;
-    background-color: white;
-    position: relative;
-  }
-  
-  .topnav #myLinks {
-    display: none;
-  }
-  
-  .topnav a {
-    color: black;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    display: block;
-  }
-  
-  .topnav a.icon {
-    background: white;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 110px;
-    width: 50px;
-    margin-top: 30px;
-  }
-  
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  .active {
-    background-color: #04AA6D;
-    color: white;
-  }
-
-  .topnav i.fa {
-    width: 400px !important;
-  }
-
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    width: 30%;
-}
-
-.img-parent .img {
-    height: 160px;
-    width: auto;
-    display: block;
-    margin-left: 30px;
-    margin-top: 10px;
-}
-
-.colored-body {
-    background-color: #CFF1EF;
-    width: 330%;
-    height: 430px;
-    margin-left: -10px;
-}
-
-.s-header {
-    text-align: center;
-    padding: 30px;
-    margin-top: 20px;
-    text-align: center;
-    font-size: larger;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: x-large;
-}
-
-.foot-start {
-    margin-left: 40px;
-    margin-right: 40px;
-    font-size: x-large;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-.foot-start h2 {
-    color: black;
-}
-
-.foot-start p {
-    display: inline;
-}
-
-.input-email {
-    display: inline;
-    display: flex;
-    padding: 80px;
-    margin-top: -90px;
-    height: 30px;
-}
-
-input[type=email] {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #000000;
-    padding: 10px;
-    width: 250%;
-    margin-left: -40px;
-}
-
-.input-email button {
-    color: #ffffff;
-    background-color: #000000;
-    padding: 1px;
-    border-radius: 3px;
-    width: 190%;
-}
-
-.input-email button:hover {
-    background-color: #BE79DF;
-    color: black;
-    
-
-}    
-
-footer {
-  background-color: black;
-  color: white;
-  width: 330%;
-  margin-left: -7px;
-  margin-top: -10px;
-  font-size: x-large;
-}
-
-.f1 {
-  padding: 30px;
-}
-
-.f1 a {
-  text-decoration: none;
-  color: rgb(70, 172, 212);
-  }
-
-
-.f1 img {
-  padding: 10px;
-  height: 30px;
-  width: auto;
-}
-
-footer hr {
-  color: white;
-  background-color: white;
-  height: 5px;
-}
-
-.copyright {
-  text-align: center;
-  margin-top: 20px;
-  padding: 2px;
-}
-
-.copyright a {
-  color: white;
-}
-
-</style>
-
-<script>
-    function myFunction() {
-      var x = document.getElementById("myLinks");
-      if (x.style.display === "block") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "block";
-      }
+        height: auto;
+        width: 50%;
     }
-</script>
 
+    .mount {
+        height: auto;
+        width: 100%;
+        filter: blur(0px);
+    }
+    .bg-image {
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+
+    .bg-text {
+        background-color: rgba(red, green, blue, alpha);
+        color: white;
+        font-weight: bold;
+        font-size: x-large;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 80%;
+        padding: 20px;
+        text-align: center;
+        font-style: italic;
+        font-family:Tahoma,Arial,sans-serif;
+    }
+
+    .italic {
+       letter-spacing: 0em;
+       font-style:italic;
+    }
     
+    .bord {
+       border-style: solid;
+       padding: 10px;
+       border-color: black;
+       
+       
+       background-image: url("images/orangebg_1.png");
+       
+    }
+    header {
+       position:static;
+       
+    }
+    </style>
