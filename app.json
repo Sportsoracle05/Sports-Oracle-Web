@@ -1,0 +1,30 @@
+
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "env": {
+    "RAILS_MASTER_KEY": {
+      "description": "Key to decrypt Rails credentials.",
+      "require": true,
+      "generator": "secret"
+    },
+    "SAFE_EMAIL_DEST": {
+      "description": "Where to send emails when in safe mode.",
+      "required": false
+    }
+  },
+  "environments": {
+est": {
+      "scripts": {
+        "test": "bundle exec rake spec"
+      }
+    },
+    "staging": {
+      "env": {
+        "SAFE_EMAIL_DEST": "marvelousaare@gmail.com"
+      }
+    },
+    "production": {
+    }
+  }
+}
