@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Oracle</title>
+    <link rel="stylesheet" href="all.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <script language="javascript" type="text/javascript" src="dplayer.js"></script>
+    <LINK REL="SHORTCUT ICON"
+    HREF="images/HLogo.ico">
+    <meta property="og:image" content="https://sportsoracle.vercel.app/images/EMSESportsLogo.png" />
+    <meta property="og:title" content="EMSE Sports Player" />
+    
+    
+    
+    
+    <header class="main-header"> 
+        <div class="logo">
+            <img class="header" src="images\EMSESportsLogo.png" alt="logo" srcset="">
+        </div>
+        <span class="wrapper"  style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        
+        <!--Top menu -->
+        <div class="sidebar overlay" id="myNav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!--profile image & text-->
+        <!--menu item-->
+        <ul class="overlay-content">
+        <li>
+        <a href="index.html" class="active">
+        <span class="icon"><i class="fas fa-home"></i></span>
+        <span class="item">Home</span>
+        </a>
+        </li>
+        <li>
+        <a href="https://www.facebook.com/EMSESportsOfficial">
+        <span class="icon"><i class="fas fa-desktop"></i></span>
+        <span class="item">FB Live</span>
+        </a>
+        </li>
+        <li>
+        <a href="FooterLinks/ContactUs/index.html">
+        <span class="icon"><i class="fas fa-user-friends"></i></span>
+        <span class="item">Contact Us</span>
+        </a>
+        </li>
+        <li>
+        <a href="/../storage/emulated/0/SportsOracleWeb/FooterLinks/Advertising/index.html">
+        <span class="icon"><i class="fas fa-money-bill"></i></span>
+        <span class="item">Advertise</span>
+        </a>
+        </li>
+        <li>
+        <a href="user-registration/vendor/login.php">
+        <span class="icon"><i class="fas fa-sign-in-alt"></i></span>
+        <span class="item">Sign In/Up</span>
+        </a>
+        </li>
+        </ul>
+        </div>
+        </div>
+        
+        </div>
+        </header>
+        
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+        
+        *{
+        list-style: none;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Open Sans', sans-serif;
+        }
+        
+        .wrapper {
+        float: right;
+        margin-top: -60px;
+        margin-right: 20px;
+        color: black;
+        
+        }
+        
+        .wrapper .sidebar{
+        background: rgb(5, 68, 104);
+        float: right;
+        
+        top: 0;
+        right: 0;
+        width: 225px;
+        height: 100%;
+        padding: 20px 0;
+        transition: all 0.5s ease;
+        }
+        
+        .wrapper .sidebar ul li a{
+        display: block;
+        padding: 13px 30px;
+        border-bottom: 1px solid #10558d;
+        color: rgb(241, 237, 237);
+        font-size: 16px;
+        position: relative;
+        }
+        
+        .wrapper .sidebar ul li a .icon{
+        color: #dee4ec;
+        width: 30px;
+        display: inline-block;
+        }
+        
+        .wrapper .sidebar ul li a:hover,
+        .wrapper .sidebar ul li a.active{
+        color: #0c7db1;
+        
+        background:white;
+        border-right: 2px solid rgb(5, 68, 104);
+        }
+        
+        .wrapper .sidebar ul li a:hover .icon,
+        .wrapper .sidebar ul li a.active .icon{
+        color: #0c7db1;
+        }
+        
+        .wrapper .sidebar ul li a:hover:before,
+        .wrapper .sidebar ul li a.active:before{
+        display: block;
+        }
+        
+        .wrapper .section{
+        width: calc(100% - 225px);
+        margin-left: 225px;
+        transition: all 0.5s ease;
+        }
+        
+        .wrapper .section .top_navbar{
+        background: rgb(7, 105, 185);
+        height: 50px;
+        display: flex;
+        align-items: center;
+        padding: 0 30px;
+        
+        }
+        
+        .wrapper .section .top_navbar .hamburger a{
+        font-size: 28px;
+        color: #f4fbff;
+        }
+        
+        .wrapper .section .top_navbar .hamburger a:hover{
+        color: #a2ecff;
+        }
+        
+        header .active .wrapper .sidebar{
+        left: -225px;
+        }
+        
+        header .active .wrapper .section{
+        margin-left: 0;
+        width: 100%;
+        }
+        
+        
+        .overlay {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: orange;
+        background-color: gray;
+        overflow-x: hidden;
+        transition: 0.5s;
+        float: right;
+        
+        }
+        
+        .overlay-content {
+        position: relative;
+        top: 25%;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+        
+        }
+        
+        .overlay a { 
+        text-decoration: none;
+        display: block;
+        transition: 0.3s;
+        padding: 13px 30px;
+        border-bottom: 1px solid orange;
+        color: rgb(241, 237, 237);
+        font-size: 16px;
+        position: relative;
+        text-align: left;
+        }
+        
+        .overlay a:hover, .overlay a:focus {
+        
+        color: orange;
+        }
+        
+        
+        .overlay .closebtn {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        font-size: 60px;
+        border-style: none;
+        }
+        
+        @media screen and (max-height: 450px) {
+        .overlay a {font-size: 20px}
+        .overlay .closebtn {
+        font-size: 40px;
+        top: 15px;
+        right: 35px;
+        }
+        
+        }
+        
+        
+        </style>
+        
+        <script>
+        function openNav() {
+        document.getElementById("myNav").style.width = "50%";
+        }
+        
+        function closeNav() {
+        document.getElementById("myNav").style.width = "0%";
+        }
+        
+        
+        
+        var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function(){
+        document.querySelector("header").classList.toggle("active");
+        })
+        
+        </script>
+</head>
+<body onload="init_api()">
+    <div class="bg" ></div>
+    
+    <div class="section2" >
+        <div class="sub-header" >
+            <hr> 
+            <h4 class="italic" >EMSE SPORTS TV</h4>
+        </div>
+        
+        
+        
+        
+        <div class="posts" >
+            <h2>EMSE Player</h2>
+            <h4>Once we're live, you'll be able to watch us here</h4>
+        </div>
+                <iframe frameBorder="1" scrolling="no" id="chat_frame" src="https://play.webvideocore.net/popplayer.php?it=797jxy13380s&is_link=1&w=720&h=405&pause=1&title=AFCON+Livestream&skin=3&repeat=&brandNW=1&start_volume=100&bg_gradient1=%23ffffff&bg_gradient2=%23e9e9e9&fullscreen=&fs_mode=2&skinAlpha=80&colorBase=%23ffffff&colorIcon=%23000000&colorHighlight=%235cbbf5&direct=false&no_ctrl=&auto_hide=1&viewers_limit=0&cc_position=bottom&cc_positionOffset=70&cc_multiplier=0.03&cc_textColor=%23ffffff&cc_textOutlineColor=%23ffffff&cc_bkgColor=%23000000&cc_bkgAlpha=0.1&image=https%3A%2F%2Fmember.streamingvideoprovider.com%2Fpanel%2Fserver%2Fclip%3Fa%3DGenerateThumbnail%26clip_id%3D7703416%26size%3Dlarge&mainBg_Color=%23ffffff&aspect_ratio=16%3A9&play_button=1&play_button_style=pulsing&sleek_player=1&stretch=&auto_play=0&auto_play_type=unMute&floating_player=none" width="100%" height="200"></iframe>  
+                
+        <div class="half2">
+            <div class="podcast">
+                <h2 class="italic" >EMSE Sports Roll <br> Football Podcast</h2>
+            </div>
+            <div class="episode" >
+                <p>Listen to the latest episodes <br> & subscribe to all</p>
+            </div>
+            <div class="half2in" >
+                <div class="orangebg" >
+                    <h1 class="italic" >EMSE Sports <br> Roll <br> Football <br> Podcast</h1>
+                    <p>Hosted by Sport's Oracle & Mayor</p>
+                </div>
+            </div>
+             <div class="button" >
+                <iframe src="https://widget.spreaker.com/player?show_id=6052943&theme=dark&playlist=show" width="100%" height="80px" frameborder="4"></iframe>
+             </div>
+            
+            <div class="subscribe">
+                <p>Subscribe to our podcast via:<br>iTunes , Spotify</p>
+            </div>
+        </div>
+       
+    
+    </div>
+    <div class="news" >
+        <h1 class="italic" >Football News</h1>
+        
+    </div>
+    
+    <div class="posts" >
+        <h2>Check back soon</h2>
+        <h4>Once posts are published, you'll see them here</h4>
+    </div>
+    <div class="btn" >
+        <button class="italic"  onclick="window.location.href='FooterLinks/ContactUs/index.html';">
+        Click Here
+        </button>
+    </div>
+    
+     <img class="threads"  src="images/threads.png">
+   
+
+</body>
+<footer class="half2" >
+    <div class="f-head" >
+        <h1 class="italic" >EMSE Sports Roll</h1>
+    </div>
+    <div class="f-image">
+        <a href="https://www.facebook.com/EMSESportsOfficial?mibextid=VqkefZtyiaKY4pB6"><img src="Images/facebook-mobile.png" alt="" srcset=""></a>
+        <a href="https://www.instagram.com/emseofficial?igsh=YWYwM2I1ZDdmOQ=="><img src="Images/instagram-mobile.png" alt="" srcset=""></a>
+        <a href="https://x.com/_OOSOfficial?t=dcyyqcvCFnYCoan5Rp6aQA&s=09"><img src="Images/twitterx-mobile.png" alt="" srcset=""></a>
+    </div>
+    <div class="fs" >
+        <hr> 
+        <h3 class="italic" >The EMSE Sports Newsletter</h3>
+    </div>
+    <div class="newsletter" >
+        <div class="email" >
+            <h6>Email<span>*</span></h6>
+            <form action="form.php"  class="Email-ID" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+                <label for="email"></label>
+                <input type="text" placeholder="Enter your email here*" >
+                <button onsubmit="Submitted" type="Submit" >Submit</button>
+            </form>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="copyright" >
+        <h5> © 2024 by EMSE Sports. Powered and secured by Oracle</h5>
+    </div>
+</footer>
+</html>
+
+<style>
+     .newsletter {
+         padding: 6px;
+     }
+     .threads {
+         margin-top: 20px;
+     }
+     .section2 {
+         margin-top: -190px;
+     }
+     .bg {
+         height: 400px;
+         width: auto;
+         background-image: url("images/Announcement.png");
+         background-size: 350px;
+         background-repeat:no-repeat;
+         margin-top: 85px;
+         margin-left: 5px;
+     }
+
+     .fp-Video {
+         border: 1px double black;
+         width: 322px;
+         height: 242px;
+     }
+     .display {
+         width: 100%;
+         height: 100%;
+         display: inline-block;
+     }
+     .display > video, object {
+         width: 100%;
+         height: 100%;
+     }
+     
+     .main-header {
+         padding: 5px;
+         background-color: white;
+         position: fixed;
+         margin-top: -85px;
+         margin-left: -7px;
+         border-bottom: solid;
+     }
+     .copyright h5{
+         margin-left: 20px;
+         color: white;
+         font-size: medium;
+         font-weight: normal;
+         font-size:smaller;
+         font-family:Arial,sans-serif;
+         font-size: 10px;
+         text-align: center;
+     }
+     .copyright {
+         padding: 3px;
+     }
+     .Email-ID {
+        padding: 5px;
+     }
+     .Email-ID button {
+        width: 29%;
+        height: 44px;
+        background-color: orange;
+        border-style: groove;
+        border-color: white;
+     }
+     .Email-ID input {
+        background-color: white;
+        height: 40px;
+        border-style: none;
+        width: 63%;
+     }
+     .email span {
+        color: orange;
+     }
+     .email {
+        margin-left: 25px;
+     }
+     .email h6{
+        color: white;
+        display: inline;
+        margin-left: 5px;
+     }
+     .fs {
+         padding: 30px;
+         margin-bottom: -20px;
+     }
+     .fs hr {
+     width: 8%;
+     height: 3px;
+     background-color: white;
+     color: black;
+     border-style: none;
+     border-radius: 5px;
+     float: left;
+     margin-left: 2px;
+     margin-top: 9px;
+     }
+     
+     .fs h3 {
+     margin-left: 40px;
+     color: white !important;
+     font-size: medium;
+     }
+     
+     .f-image:hover {
+        background-color: rgba(0,0,0,0);
+     }
+     
+     .f-image img:hover {
+        background-color: orange;
+     }
+     
+     .f-image img {
+     padding: 0px;
+     height: 30px;
+     width: auto;
+     margin-top: -20px;
+     margin-left: 30px;
+     }
+     
+     .f-head {
+        padding:40px;
+        margin-left: 7px;
+        color: orange;
+     }
+     footer {
+        background-color: gray;
+        background-image: url("images/paint1.png") !important;
+        
+     }
+     body img {
+        height: 55px;
+        width: 100%;
+        margin-bottom: -4px;
+     }
+     .btn button:hover  {
+     background-color: orange;
+     }
+     .btn button {
+     padding:10px;
+     width: 200px;
+     color: white;
+     background-color: black;
+     border-color: white;
+     border-style: none;
+     }
+     .btn {
+     text-align: center;
+     
+     }
+     .news {
+        background-image: url("images/orangebg.png");
+        padding: 30px;
+        margin-left: 60px;
+        background-repeat: no-repeat;
+        height: 90px;
+        margin-top: -70px;
+     }
+     .news h1 {
+        color: black;
+        margin-left: -60px;
+        margin-top: 80px;
+     }
+     .subscribe {
+        text-decoration: none !important;
+        padding: 40px;
+     }
+     .subscribe p {
+        text-align: center;
+        text-decoration: none;
+        color: white;
+     }
+     .button a {
+        text-decoration: none;
+        color: white;
+        font-size: medium;
+        font-weight: bold;
+     }
+     .button button:hover  {
+        background-color: orange;
+     }
+     .button button {
+        padding:10px;
+        width: 200px;
+        
+        background-color: rgba(0,0,0,0);
+        border-color: white;
+        border-style: groove;
+     }
+     .button {
+        text-align: center;
+        padding: 30px;
+     }
+     .orangebg p {
+        padding: 3px;
+        font-weight: bold;
+     }
+     .orangebg h1 {
+        font-size: xx-large;
+        padding: 30px;
+        color: white;
+        letter-spacing: 2px;
+        
+     }
+     .orangebg {
+        background-image: url("images/threads.png");
+        background-color: orange;
+        width: 87%;
+        margin-left: 25px;
+        border-style: solid;
+        border-color: white;
+        background-repeat:repeat-x;
+        height: 300px;
+     }
+     .half2in {
+        text-align: center;
+        
+     }
+     .episode {
+        margin-left: 20px;
+        padding: 10px;
+        font-size: large;
+        color: white;
+     }
+     .podcast {
+        margin-top: 30px;
+        padding: 30px;
+        
+     }
+     .podcast h2{
+        text-align: center;
+        color: white;
+        font-size: xx-large;
+        letter-spacing: 2px;
+        margin-top: 30px;
+     }
+     .half2 {
+        background-image: url("images/paint2.png");
+        background-color: gray;
+        margin-left: -7px;
+        margin-right: -9px;
+        margin-top: 0px;
+        width: 101%;
+        
+     }
+     .posts {
+        text-align: center;
+        padding: 30px;
+        margin-top: 50px;
+     }
+     .posts h2 {
+        color: orange;
+        padding: 8px;
+     }
+     .sub-header {
+        margin-top: 35px;
+        display: inline;
+     }
+     .sub-header hr {
+        width: 8%;
+        height: 3px;
+        background-color: black;
+        color: black;
+        border-style: none;
+        border-radius: 5px;
+        float: left;
+        margin-left: 15px;
+     }
+     
+     .sub-header h4 {
+       margin-left: 59px;
+     }
+     .logo {
+        padding: 1px;
+        margin-left: -15px;
+        width: 100%;
+     }
+    .header {
+        height: auto;
+        width: 50%;
+    }
+
+    .italic {
+       letter-spacing: 0em;
+       font-style:italic;
+    }
+    
+    .bord {
+       border-style: solid;
+       padding: 10px;
+       border-color: black;
+       background-image: url("images/orangebg_1.png");
+    }
+</style>
