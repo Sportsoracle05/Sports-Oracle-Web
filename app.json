@@ -3,7 +3,7 @@
   "description": "A template for getting started with the popular Ruby framework.",
   "website": "http://rubyonrails.org",
   "success_url": "/welcome",
-  "addons": ["heroku-postgresql:hobby-dev", "papertrail"],
+  "addons": ["rediscloud:30", "sentineldb:test"],
   "env": {
     "RAILS_ENV": "production",
     "COOKIE_SECRET": {
