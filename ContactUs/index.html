@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="all.css">
+ 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <title>Sport's Oracle - Contact Us</title>
+    <LINK REL="SHORTCUT ICON"
+    HREF="images/HLogo.ico">
+    <meta property="og:image" content="https://sportsoracle.vercel.app/images/EMSESportsLogo.png" />
+    <meta property="og:title" content="Contact Us - EMSE Sports" />
+    
+    <header class="main-header"> 
+    <div class="logo">
+    <img class="header" src="images\logo.png" alt="logo" srcset="">
+    </div>
+    
+    <span class="wrapper"  style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    
+    <!--Top menu -->
+        <div class="sidebar overlay" id="myNav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!--profile image & text-->
+        <!--menu item-->
+            <ul class="overlay-content">
+                <li>
+                    <a href="/../storage/emulated/0/SportsOracleWeb/index.html" class="active">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/EMSESportsOfficial">
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        <span class="item">FB Live</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <span class="icon"><i class="fas fa-user-friends"></i></span>
+                        <span class="item">Contact Us</span>
+                    </a>
+                </li>
+                <li>
+                <a href="/../storage/emulated/0/SportsOracleWeb/FooterLinks/Advertising/index.html">
+                <span class="icon"><i class="fas fa-ad"></i></span>
+                <span class="item">Advertise</span>
+                </a>
+                </li>
+                <li>
+                <a href="/../storage/emulated/0/SportsOracleWeb/FooterLinks/Donate/index.html">
+                <span class="icon"><i class="fas fa-address-card"></i></span>
+                <span class="item">About Us</span>
+                </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    </div>
+    </header>
+    
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    
+    *{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    }
+    
+    .wrapper {
+    float: right;
+    margin-top: -60px;
+    margin-right: 20px;
+    color: black;
+    
+    }
+    
+    .wrapper .sidebar{
+    background: rgb(5, 68, 104);
+    float: right;
+    
+    top: 0;
+    right: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+    }
+   
+    .wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #10558d;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+    }
+    
+    .wrapper .sidebar ul li a .icon{
+    color: #dee4ec;
+    width: 30px;
+    display: inline-block;
+    }
+    
+    .wrapper .sidebar ul li a:hover,
+    .wrapper .sidebar ul li a.active{
+    color: #0c7db1;
+    
+    background:white;
+    border-right: 2px solid rgb(5, 68, 104);
+    }
+    
+    .wrapper .sidebar ul li a:hover .icon,
+    .wrapper .sidebar ul li a.active .icon{
+    color: #0c7db1;
+    }
+    
+    .wrapper .sidebar ul li a:hover:before,
+    .wrapper .sidebar ul li a.active:before{
+    display: block;
+    }
+    
+    .wrapper .section{
+    width: calc(100% - 225px);
+    margin-left: 225px;
+    transition: all 0.5s ease;
+    }
+    
+    .wrapper .section .top_navbar{
+    background: rgb(7, 105, 185);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    
+    }
+    
+    .wrapper .section .top_navbar .hamburger a{
+    font-size: 28px;
+    color: #f4fbff;
+    }
+    
+    .wrapper .section .top_navbar .hamburger a:hover{
+    color: #a2ecff;
+    }
+    
+    header .active .wrapper .sidebar{
+    left: -225px;
+    }
+    
+    header .active .wrapper .section{
+    margin-left: 0;
+    width: 100%;
+    }
+    
+    
+    .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: orange;
+    background-color: gray;
+    overflow-x: hidden;
+    transition: 0.5s;
+    float: right;
+    
+    }
+    
+    .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    
+    }
+    
+    .overlay a { 
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    padding: 13px 30px;
+    border-bottom: 1px solid orange;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+    text-align:left;
+    }
+    
+    .overlay a:hover, .overlay a:focus {
+    
+    color: orange;
+    }
+    
+    
+    .overlay .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 60px;
+    border-style: none;
+    }
+    
+    @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+    
+    }
+    
+    
+    </style>
+    
+    <script>
+    function openNav() {
+    document.getElementById("myNav").style.width = "50%";
+    }
+    
+    function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+    }
+    
+    
+    
+    var hamburger = document.querySelector(".hamburger");
+    hamburger.addEventListener("click", function(){
+    document.querySelector("header").classList.toggle("active");
+    })
+    
+    </script>
+</head>
+<body class="body">
+    <header class="hdr">
+        <h1>CONTACT</h1>
+    </header>
+    <form autocomplete="on" action="form.php" method="post"  class="form" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>
+        <div class="name-email">
+            <div class="name in-holder">
+                <label for="name"></label>
+                <input class="na click" type="text" name="name" id="" placeholder="Name">
+            </div>
+            <div class="email in-holder">
+                <label for="email"></label>
+                <input class="em click" type="email" name="email" id="" placeholder="Email">
+            </div>
+        </div>
+        <div>
+            <div class="in-holder subject">
+                <label for="subject"></label>
+                <input class="click" type="text" name="subject" id="" placeholder="Subject">
+            </div>
+            <div class="in-holder message">
+                <label for="message"></label>
+                <textarea name="message"  type="text" id="textarea_comp-jxafbcz8" class="click" placeholder="Message" required="" aria-required="true" tabindex="-1" data-restore-tabindex="null"></textarea>
+            </div>
+        </div>
+        <div class="btn-par">
+            <button class="btn wixui-button__label">Submit</button>
+        </div>
+    </form>
+    
+    
+    
+    
+    
+    
+    
+    <img class="threads" src="images/threads.png">
+
+    <div class="half2">
+        <div class="half2-pa">
+            <div>
+                <h2>OPENING HOURS</h2>
+            </div>
+            <div class="h2h5">
+                <h5>Mon - Fri: 7am - 10pm <br>​​Saturday: 8am - 10pm <br> ​Sunday: 8am - 11pm</h5>
+            </div>
+        </div>
+        <div class="half2-par">
+            <div>
+                <h2>ADDRESS</h2>
+            </div>
+            <div class="h2h5">
+                <h5>12 Gbadamosi Street <br>Ikotun, Nigeria</h5>
+            </div>
+        </div>
+        <div class="half2-par">
+            <div>
+                <h2>GET IN TOUCH</h2>
+            </div>
+            <div class="h2h5">
+                <h5>234-907-2416-244 <br>info@oracle.com</h5>
+            </div>
+            <div class="return" >
+            <a href="/../storage/emulated/0/SportsOracleWeb/index.html" > ∆Home
+            </div>
+        </div>
+        <div class="copyright" >
+        <h5> © 2024 by EMSE Sports. Powered and secured by Oracle</h5>
+        </div>
+    </div>
+    
+    
+    
+</body>
+</html>
+
+
+<style>
+    .return a {
+    color: white;
+    text-decoration:underline;
+   
+    }
+    .return {
+    margin-top: 20px;
+    word-spacing: 0px;
+    
+    }
+    .main-header {
+    padding: 5px;
+    background-color: white;
+    position: fixed;
+    margin-top: -25px;
+    margin-left: -7px;
+    z-index: 10000;
+    border-bottom: none;
+    }
+    
+    .half2 .copyright h5{
+    margin-left: 20px;
+    color: white;
+    font-size:smaller;
+    font-weight: normal;
+    font-family:Arial,sans-serif;
+    word-spacing: 0px;
+    font-size: 10px;
+    }
+    .half2 .copyright {
+    padding: 1px;
+    margin-top: -20px;
+    }
+    .threads {
+     width: 100%;
+     height: auto;
+     margin-top: 65px;
+    }
+    .hdr h1 {
+     margin-left: -70px;
+    }
+    
+    .logo {
+    margin-left: -5px;
+    width: 100%;
+    
+    }
+    .header {
+    height: auto;
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+    color: #00EAFA;
+    margin-top: 0px;
+    letter-spacing: 8px;
+    
+    
+    }
+    
+    .form {
+     margin-top: -65px;
+    }
+    .body {
+    background-color: white;
+    color: #0E2096;
+    
+    font-family: sans-serif;
+    }
+    
+    .hdr {
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+    color: black;
+    margin-top: 25px;
+    letter-spacing: 8px;
+    
+    background-image: url("images/orangebg.png");
+    padding: 100px;
+    margin-left: 40px;
+    background-repeat: no-repeat;
+    height: 90px;
+    }
+    
+    .name-email {
+    
+    margin-top: 30px;
+    }
+    
+    
+    .subject {
+    overflow-wrap: break-word;
+    }
+    
+    .message {
+    margin-left: 0px;
+    margin-top: 10px;
+    }
+    
+    .name input {
+    background-color: rgba(0, 0, 0, 0);
+    width: 94%;
+    margin-left: 8px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid white;
+    color: black;
+    border-color: black;
+    }
+    
+    .in-holder input::placeholder {
+    color: black;
+    font-weight: lighter;
+    font-size: small;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }    
+    
+    .email input {
+    background-color: rgba(0, 0, 0, 0);
+    width: 94%;
+    margin-left: 8px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid white;
+    border-color: black;
+    }
+    
+    .subject input {
+    background-color: rgba(0, 0, 0, 0);
+    width: 94%;
+    margin-left: 8px;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid white;
+    border-color: black;
+    }
+    
+    .message textarea{
+    background-color: rgba(0, 0, 0, 0);
+    width: 94%;
+    margin-left: 8px;
+    height: 70px;
+    border: none;
+    border-bottom: 1px solid black;
+    resize: none;
+    border-color: black;
+    }
+    
+    .in-holder textarea::placeholder {
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: small;
+    font-style: italic;
+    font-weight: 100;
+    }
+    
+    .na:hover {
+    border-bottom: 1px solid white;
+    }
+    
+    .em:hover {
+    border-bottom: 1px solid white;
+    }
+    
+    .subject input:hover {
+    border-bottom: 1px solid white;
+    }
+    
+    .message textarea:hover {
+    border-bottom: 1px solid white;
+    }
+    
+    .btn-par {
+    width: 45.8%;   
+    }
+    
+    .btn {
+    float: right;
+    padding: 1px;
+    width: 15%;
+    font-size: small;
+    color: black;
+    background-color: orange;
+    }
+    
+    .btn {
+    color: var(--corvid-color,rgb(var(--txt,var(--color_15))));
+    font: var(--fnt,var(--font_5));
+    position: relative;
+    transition: var(--trans2,color .4s ease 0s);
+    white-space: nowrap;
+    background: transparent;
+    vertical-align: baseline;
+    cursor: pointer;
+    text-align: initial;
+    text-rendering: auto;
+    letter-spacing: 2px;
+    border-style: none;
+    height: 1px;
+    font-size: large;
+    font-weight: 700;
+    color: black;
+    margin-top: 15px;
+    
+    }
+    
+    .btn:hover {
+    color: orange;
+    }
+    
+    input[type=text]:focus {
+    border-style: none;
+    border-radius: 10px;
+    }
+    
+    input[type=email]:focus {
+    border-style: none;
+    border-radius: 10px;
+    }
+    
+    textarea[type=text]:focus {
+    border-style: none;
+    border-radius: 10px;
+    }
+    
+    input {
+    color: black;
+    }
+    
+    textarea {
+    color: black;
+    }
+    
+    .half2 {
+    text-align: center;
+    width: 101%;
+    justify-content: center;
+    margin-top: 200px;
+    word-spacing: 5px;
+    color: orange;
+    background-image: url("images/paint2.png");
+    background-color: gray;
+    margin-left: -5px;
+    margin-right: -19px;
+    margin-top: -35px;
+    margin-bottom: -13px;
+    
+    }
+    
+    .half2-par {
+    text-align: center;
+    padding: 35px;
+    
+    }
+    
+    .half2-pa {
+    text-align: center;
+    padding: 35px;
+    margin-top: 30px;
+    }
+    
+    .h2h5 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    color: white;
+    }
+    
+    .dis {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: orange;
+    padding: 30px;
+    font-size: large;
+    }
+    
+    .dis a {
+    color: orange;
+    }
+    
+    .half2 h5 {
+    font-weight:normal;
+    color: white;
+    }
+    
+    
+    
+    
+
+
+
+
+</style>
