@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sport's Oracle - About Us</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="all.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <title>Sport's Oracle - About Us</title>
+    <LINK REL="SHORTCUT ICON"
+    HREF="images/HLogo.ico">
+    <meta property="og:image" content="https://sportsoracle.vercel.app/images/EMSESportsLogo.png" />
+    <meta property="og:title" content="About Us - EMSE Sports" />
+    
+    <header class="main-header"> 
+    <div class="logo">
+    <img class="header" src="images\logo.png" alt="logo" srcset="">
+    </div>
+    
+    <span class="wrapper"  style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    
+    <!--Top menu -->
+    <div class="sidebar overlay" id="myNav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <!--profile image & text-->
+    <!--menu item-->
+    <ul class="overlay-content">
+    <li>
+    <a href="/../storage/emulated/0/SportsOracleWeb/index.html" class="active">
+    <span class="icon"><i class="fas fa-home"></i></span>
+    <span class="item">Home</span>
+    </a>
+    </li>
+    <li>
+    <a href="https://www.facebook.com/EMSESportsOfficial">
+    <span class="icon"><i class="fas fa-desktop"></i></span>
+    <span class="item">FB Live</span>
+    </a>
+    </li>
+    <li>
+    <a href="/../storage/emulated/0/SportsOracleWeb/FooterLinks/ContactUs/index.html">
+    <span class="icon"><i class="fas fa-user-friends"></i></span>
+    <span class="item">Contact Us</span>
+    </a>
+    </li>
+    <li>
+    <a href="/../storage/emulated/0/SportsOracleWeb/FooterLinks/Advertising/index.html">
+    <span class="icon"><i class="fas fa-ad"></i></span>
+    <span class="item">Advertise</span>
+    </a>
+    </li>
+    <li>
+    <a href="index.html">
+    <span class="icon"><i class="fas fa-address-card"></i></span>
+    <span class="item">About Us</span>
+    </a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    
+    </div>
+    </header>
+    
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    
+    *{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    }
+    
+    .main-header {
+    padding: 0px;
+    background-color: white;
+    position: fixed;
+    margin-top: -73px;
+    margin-left: -7px;
+    z-index: 10000;
+    border-bottom: none;
+    }
+    
+    .logo {
+    margin-left: -5px;
+    width: 100%;
+    
+    }
+    .header {
+    height: auto;
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+    font-size: larger;
+    color: #00EAFA;
+    margin-top: 0px;
+    letter-spacing: 8px;
+    
+    
+    }
+    
+    .wrapper {
+    float: right;
+    margin-top: -60px;
+    margin-right: 20px;
+    color: black;
+    
+    }
+    
+    .wrapper .sidebar{
+    background: rgb(5, 68, 104);
+    float: right;
+    
+    top: 0;
+    right: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+    }
+    
+    .wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #10558d;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+    }
+    
+    .wrapper .sidebar ul li a .icon{
+    color: #dee4ec;
+    width: 30px;
+    display: inline-block;
+    }
+    
+    .wrapper .sidebar ul li a:hover,
+    .wrapper .sidebar ul li a.active{
+    color: #0c7db1;
+    
+    background:white;
+    border-right: 2px solid rgb(5, 68, 104);
+    }
+    
+    .wrapper .sidebar ul li a:hover .icon,
+    .wrapper .sidebar ul li a.active .icon{
+    color: #0c7db1;
+    }
+    
+    .wrapper .sidebar ul li a:hover:before,
+    .wrapper .sidebar ul li a.active:before{
+    display: block;
+    }
+    
+    .wrapper .section{
+    width: calc(100% - 225px);
+    margin-left: 225px;
+    transition: all 0.5s ease;
+    }
+    
+    .wrapper .section .top_navbar{
+    background: rgb(7, 105, 185);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    
+    }
+    
+    .wrapper .section .top_navbar .hamburger a{
+    font-size: 28px;
+    color: #f4fbff;
+    }
+    
+    .wrapper .section .top_navbar .hamburger a:hover{
+    color: #a2ecff;
+    }
+    
+    header .active .wrapper .sidebar{
+    left: -225px;
+    }
+    
+    header .active .wrapper .section{
+    margin-left: 0;
+    width: 100%;
+    }
+    
+    
+    .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: orange;
+    background-color: gray;
+    overflow-x: hidden;
+    transition: 0.5s;
+    float: right;
+    
+    }
+    
+    .overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    
+    }
+    
+    .overlay a { 
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+    padding: 13px 30px;
+    border-bottom: 1px solid orange;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+    text-align:left;
+    }
+    
+    .overlay a:hover, .overlay a:focus {
+    
+    color: orange;
+    }
+    
+    
+    .overlay .closebtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 60px;
+    border-style: none;
+    }
+    
+    @media screen and (max-height: 450px) {
+    .overlay a {font-size: 20px}
+    .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+    }
+    
+    }
+    
+    
+    </style>
+    
+    <script>
+    function openNav() {
+    document.getElementById("myNav").style.width = "50%";
+    }
+    
+    function closeNav() {
+    document.getElementById("myNav").style.width = "0%";
+    }
+    
+    
+    
+    var hamburger = document.querySelector(".hamburger");
+    hamburger.addEventListener("click", function(){
+    document.querySelector("header").classList.toggle("active");
+    })
+    
+    </script>
+</head>
+    
+        
+    
+
+<body>
+    <div class="open" >
+    <h1>About Us</h1>
+    <span class="icon"><i class="fas fa-address-card"></i></span>
+    </div>
+    
+    <div class="marina-bg" >
+        <div class="dark-blur" >
+            <h3>Learn more about what <br> we do</h3>
+            <h5>Everything you need to know about the workings of EMSE Sports Roll</h5>
+        </div>
+    </div>
+    
+    
+    
+    <div class="b-heading" >
+        <h3>EMSE Sports is the world’s fastest growing public service broadcaster</h3>
+    </div>
+    
+    <article>
+        
+    </article>
+    
+    
+    
+    
+    
+    
+    
+    <div class="copyright" >
+    <h5> © 2024 by EMSE Sports. Powered and secured by Oracle</h5>
+    </div>
+    </form>
+    
+</body>
+
+</html>
+
+<style>
+    .b-heading h3 {
+        font-size:larger;
+        font-weight:bolder;
+    }
+    .b-heading {
+        padding: 15px;
+        margin-top: 30px;
+        word-spacing: 1px;
+        letter-spacing: 0px;
+        
+    }
+    .dark-blur h5 {
+        padding: 5px;
+        font-size:large;
+        font-weight: normal;
+    }
+    .dark-blur h3 {
+        
+        font-size: 29px;
+        font-weight:bolder;
+        padding: 5px;
+        margin-top: 0px;
+    }
+    .dark-blur {
+        margin-top: 185px;
+        align-items: flex-end;
+        color: white;
+        background-color: rgba(0,0,255,0.5);
+        background-size: 20px;
+        height: 160px;
+    }
+
+    .marina-bg {
+    background-image: url("images/marina.jpg");
+    height: 345px;
+    width: 100%;
+    background-repeat:no-repeat;
+    background-size: 400px;
+    margin-top: -46px;
+    display: flex;
+    }
+    .open {
+        margin-top: 73px;
+        background-color: blue;
+        
+        padding: 17px;
+        
+    }
+    
+    .open .icon {
+        float: right;
+        margin-top: -45px;
+        
+    }
+    
+    .open .icon .fa-address-card {
+        width: 50px;
+        margin-top: ;
+        font-size: 25px;
+        border-style:solid;
+        padding: 9px;
+        border-color: white;
+    }
+    
+    h1 {
+        color: white;
+        margin-left: -17px;
+        
+    }
+    
+    .copyright h5{
+    margin-left: 20px;
+    color: black;
+    font-size:smaller;
+    font-weight: normal;
+    font-family:Arial,sans-serif;
+    word-spacing: 0px;
+    font-size: 10px;
+    text-align: center;
+    border-top: solid;
+    border-color: blue;
+    }
+    .copyright {
+    padding: 15px;
+    margin-top: 65px;
+    width: auto;
+    }
+
+</style>
