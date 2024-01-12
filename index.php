@@ -7,28 +7,26 @@ switch ($_SERVER['REQUEST_URI']) {
 
     case $uri . '':
     case $uri . '/':
-        require __DIR__ . '/views/index.php';
+        require __DIR__ . '/user-registration/vendor/login.php';
         break;
 
     case $uri . '/projects/list':
-        require __DIR__ . '/controllers/project_list.php';
+        require __DIR__ . '/user-registration/vendor/index.php';
         break;
 
     case $uri . '/tasks/list':
-        require __DIR__ . '/controllers/task_list.php';
+        require __DIR__ . '/user-registration/vendor/user-registration.php';
         break;
 
     case $uri . '/projects/add':
-        require __DIR__ . '/controllers/project.php';
+        require __DIR__ . '/user-registration/vendor/home.php';
         break;
 
     case $uri . '/tasks/add':
-        require __DIR__ . '/controllers/task.php';
+        require __DIR__ . '/user-registration/Model/Member.php';
         break;
 
-    case $uri . '/reports':
-        require __DIR__ . '/controllers/reports.php';
-        break;
+    
 
         // case preg_match($uri . '/\/projects\/\?id=\d/', $_SERVER['REQUEST_URI']):
         //     require __DIR__ . '/controllers/project.php';
